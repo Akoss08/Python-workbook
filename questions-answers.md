@@ -1,55 +1,53 @@
 # Python
 
-1. A Python lefordított nyelv vagy értelmezett nyelv?
-A Python lefordítottnak és értelmezettnek is tekinthető, de a végrehajtási folyamatának különböző szakaszaiban.
+## 1. A Python lefordított(compiled) nyelv vagy értelmezett(interpreted) nyelv?
+Mindketto, de a végrehajtási folyamatának különböző szakaszaiban.
 
-Fordítás : Amikor Python kódot ír és futtat, a Python értelmező először a forráskódot (.py fájlok) egy köztes formába, az úgynevezett bájtkódba (.pyc fájlok) fordítja le. Ez a bájtkód a kód alacsonyabb szintű reprezentációja, de még mindig nem közvetlenül gépi kód. Ezt a Python Virtual Machine (PVM) képes megérteni és végrehajtani.
-Értelmezés : Miután a Python kódot bájtkódba fordították, a Python Virtual Machine (PVM) hajtja végre, amely egy tolmács. A PVM beolvassa a bájtkódot és futás közben soronként végrehajtja, ezért a Python a gyakorlatban értelmezett nyelvnek számít.
-Egyes megvalósítások, például a PyPy , Just-In-Time (JIT) fordítást használnak, ahol a Python-kódot futás közben gépi kódba fordítják a gyorsabb végrehajtás érdekében, elmosva az értelmezés és a fordítás közötti határvonalakat.
+Compilation : Amikor Python kódot írunk és futtatunk, a Python compiler először a forráskódot (.py fájlok) egy köztes formába, az úgynevezett bájtkódba (.pyc fájlok) fordítja le. Ez a bájtkód a kódunk alacsonyabb szintű reprezentációja, de még mindig nem közvetlenül gépi kód. Ezt a Python Virtual Machine (PVM) képes megérteni és végrehajtani.
 
-2. Mi az a dinamikusan tipizált nyelv?
+Interpretation : Miután a Python kódot bájtkódba fordították, a Python Virtual Machine (PVM) hajtja végre, amely egy tolmács. A PVM beolvassa a bájtkódot és futás közben soronként végrehajtja, ezért a Python a gyakorlatban értelmezett nyelvnek számít.
+
+## 2. Mi az a dynmacially typed nyelv?
 A programozási nyelvek a következő két típusra oszthatók.
 
-Statikusan beírt nyelvek: Ennél a nyelvtípusnál a változó adattípusa a fordításkor ismert, ami azt jelenti, hogy a programozónak meg kell adnia egy változó adattípusát a deklarációkor. Ilyen például a C, C++, Java és C#
-Dinamikusan beírt nyelvek: Ezek azok a nyelvek, amelyek nem igényelnek előre meghatározott adattípust egyetlen változóhoz sem, mivel azt futás közben a gép maga értelmezi. Ezeken a nyelveken a tolmácsok futás közben hozzárendelik az adattípust egy változóhoz annak értékétől függően. Ilyen például a Python és a JavaScript
+Statically typed nyelvek: Ennél a nyelvtípusnál a változó adattípusa a fordításkor ismert, ami azt jelenti, hogy a programozónak meg kell adnia egy változó adattípusát a deklarációkor. Ilyen például a C, C++, Java és C#
+
+dynmacially typed nyelvek: Ezek azok a nyelvek, amelyek nem igényelnek előre meghatározott adattípust egyetlen változóhoz sem, mivel azt futás közben a gép maga értelmezi. Ezeken a nyelveken a tolmácsok futás közben hozzárendelik az adattípust egy változóhoz annak értékétől függően. Ilyen például a Python és a JavaScript
 A statikusan gépelt nyelvek általában gyorsabbak, mint a dinamikusan gépelt nyelvek, a dinamikusan gépelt nyelvek pedig általában könnyen kódolhatók. A Python egy dinamikusan tipizált nyelv.
 
-3. Szükséges a behúzás a Pythonban?
+## 3. Szükséges a behúzásra (Indentation) a Pythonban?
 Igen, a Pythonban behúzás szükséges. A Python-tolmács Python behúzással tájékoztathatja, hogy egy utasításcsoport egy adott kódblokkhoz tartozik. A behúzások megkönnyítik a kód olvashatóságát a fejlesztők számára minden programozási nyelven, de a Pythonban nagyon fontos, hogy a kódot meghatározott sorrendben behúzzák.
 
-Behúzás a pythonban
-Python behúzás
+## 4. Mik azok a beépített adattípusok a Pythonban?
+A Python szabványos vagy beépített adattípusai a következők:
 
-4. Mik azok a beépített adattípusok a Pythonban?
-A Python szabványos vagy beépített adattípusai a következők :
+Numeric: A Python numerikus adattípusa azokat az adatokat jelöli, amelyek számértékkel rendelkeznek. A numerikus érték lehet egész szám, tort szám vagy akar boolean.
+Sequence Type: A szekvencia adattípusa a Pythonban hasonló vagy eltérő adattípusok rendezett gyűjteménye. A Pythonban több sorozattípus létezik:
 
-Numerikus: A Python numerikus adattípusa azokat az adatokat jelöli, amelyek számértékkel rendelkeznek. A numerikus érték lehet egész szám, lebegő szám, logikai szám vagy akár komplex szám is.
-Sorozattípus: A szekvencia adattípusa a Pythonban hasonló vagy eltérő adattípusok rendezett gyűjteménye. A Pythonban több sorozattípus létezik:
-Python karakterlánc
-Python lista
-Python Tuple
-Python tartomány
-Leképezési típusok: A Pythonban a hashálható adatok véletlenszerű objektumokra képezhetők le egy leképezési objektum segítségével. Jelenleg csak egy általános leképezési típus létezik, a szótár és a leképezési objektumok változtathatók.
-Python szótár
-Halmaztípusok: A Pythonban a készlet adattípusok rendezetlen gyűjteménye, amely iterálható, változtatható és nem tartalmaz ismétlődő elemeket. Az elemek sorrendje egy halmazban nem definiált, bár különböző elemekből állhat.
-5. Mi a különbség a Mutable adattípus és az Immutable adattípus között?
+- Python String
+- Python list
+- Python Tuple
+- Python range
+  
+Mapping Types: A Pythonban a hashable adatok véletlenszerű objektumokra képezhetők le egy leképezési objektum segítségével. Jelenleg csak egy általános leképezési típus létezik, a dictionary és a leképezési objektumok változtathatók.
+
+Set Types: A Pythonban a készlet adattípusok rendezetlen gyűjteménye, amely iterálható, változtatható és nem tartalmaz ismétlődő elemeket. Az elemek sorrendje egy halmazban nem definiált, bár különböző elemekből állhat.
+
+## 5. Mi a különbség a Mutable adattípus és az Immutable adattípus között?
 A változtatható adattípusok szerkeszthetők, azaz futás közben változhatnak. Pl. – Lista, szótár stb.
 A megváltoztathatatlan adattípusok nem szerkeszthetők, azaz nem változhatnak futás közben. Pl. – String, Tuple, stb.
-6. Mi az a változó hatókör a Pythonban?
-A változó hatókörének nevezzük azt a helyet, ahol egy változót találhatunk, és szükség esetén hozzá is érhetünk .
 
-Python helyi változó: A helyi változók azok, amelyek egy függvényen belül vannak inicializálva, és egyediek az adott függvényre. A lokális változó nem érhető el a függvényen kívül.
-Python globális változók: A globális változók azok, amelyek bármely függvényen kívül vannak definiálva és deklarálva, és nincsenek megadva egyetlen függvényhez sem.
-Modulszintű hatókör: Az aktuális modul programban elérhető globális objektumaira vonatkozik.
-Legkülső hatókör: Minden olyan beépített névre vonatkozik, amelyet a program hívhat. A hivatkozott név az utolsó helyen található a hatókör objektumai között.
-7. Hogyan lehet számot padlózni Pythonban?
-A Pythonban egy szám lefedéséhez használhatja a math.floor() függvényt, amely a megadott számnál kisebb vagy azzal egyenlő legnagyobb egész számot adja vissza.
+## 6. Mi az a Variable Scope a Pythonban?
+A Variable Scope az a hely, ahol egy változót találhatunk, és szükség esetén hozzá is érhetünk.
 
-A Python floor() metódusa az x alsó szintjét adja vissza, azaz a legnagyobb, x-nél nem nagyobb egész számot. 
-Ezenkívül a Python ceil(x) metódusa egy x felső határértéket ad vissza, azaz a legkisebb egész szám, amely nagyobb vagy egyenlő, mint x.
+- Python Local variable: A helyi változók azok, amelyek egy függvényen belül vannak inicializálva, és egyediek az adott függvényre. A lokális változó nem érhető el a függvényen kívül.
+- Python Global variables: A globális változók azok, amelyek bármely függvényen kívül vannak definiálva és deklarálva, és nincsenek megadva egyetlen függvényhez sem.
+- Module-level scope: Az aktuális modul programban elérhető globális objektumaira vonatkozik.
+- Outermost scope: Minden olyan beépített névre vonatkozik, amelyet a program hívhat. A hivatkozott név az utolsó helyen található a hatókör objektumai között.
 
-
-
+## 7. Hogyan lehet számot lekerekiteni Pythonban?
+A Pythonban egy szám lekerekitesehez használhatjuk a math.floor() függvényt, amely a megadott számnál kisebb vagy azzal egyenlő legnagyobb egész számot adja vissza.
+```Python
 import math
 
 n = 3.7
@@ -57,51 +55,48 @@ F_num = math.floor(n)
 
 print(F_num) 
 
-Kimenet
+Output
 3
-8. Mi a különbség a / és a // között Pythonban?
-/ a pontos osztást jelöli (az eredmény egy lebegőpontos szám), míg a // a padlóosztást (az eredmény egy egész szám). Például:
+```
+## 8. Mi a különbség a / és a // között Pythonban?
+/ a pontos osztást jelöli (az eredmény egy tizedes szám), míg a // a lekerekitett szam (az eredmény egy egész szám). Például:
 
-
+```Python
 5//2 = 2 
 5/2 = 2,5 
+```
 
+## 9. Mi a különbség a for loop és a while loop között a Pythonban?
+A „for” loopot általában különféle gyűjteménytípusok elemeinek iterálására használják, mint például a List, Tuple, Set és Dictionary. A fejlesztők „for” loopot használnak, ahol a feltételeknek mind kezdete, mind vége van. Míg a „while” loop a tényleges looping funkció, amelyet bármely más programozási nyelvben használnak. A programozók Python while loopot használnak, ahol csak a végfeltételek vannak.
 
-9. Különbség a for ciklus és a while ciklus között a Pythonban
-A „for” ciklust általában különféle gyűjteménytípusok elemeinek iterálására használják, mint például a Lista , Tuple , Set és Dictionary . A fejlesztők „for” ciklust használnak, ahol a feltételeknek mind a kezdete, mind a vége van. Míg a „while” ciklus a tényleges hurkolási funkció, amelyet bármely más programozási nyelvben használnak. A programozók Python while ciklust használnak, ahol csak a végfeltételek vannak.
+## 10. Átadhatunk-e egy függvényt argumentumként Pythonban?
+Igen, több argumentum is átadható egy függvénynek, beleértve objektumokat, változókat (azonos vagy eltérő adattípusú) és függvényeket. A függvények paraméterként átadhatók más függvényeknek, mivel ezek objektumok. A higher order függvények olyan függvények, amelyek más függvényeket is felvehetnek argumentumként.
 
-10. Átadhatunk-e egy függvényt argumentumként Pythonban?
-Igen, több argumentum is átadható egy függvénynek, beleértve objektumokat, változókat (azonos vagy eltérő adattípusú) és függvényeket. A függvények paraméterként átadhatók más függvényeknek, mivel ezek objektumok. A magasabb rendű függvények olyan függvények, amelyek más függvényeket is felvehetnek argumentumként.
+## 11. Mit jelent a pass a Pythonban?
+A Pass utasítás a Pythonban egy null művelet vagy egy placeholder. Akkor használatos, ha egy utasítás szintaktikailag szükséges, de nem akarunk kódot végrehajtani. Nem tesz mást, csak lehetővé teszi programunk szerkezetének fenntartását.
 
-11. Mit jelent a pass a Pythonban?
-A Pass utasítás a Pythonban egy null művelet vagy egy helyőrző. Akkor használatos, ha egy utasítás szintaktikailag szükséges, de nem akarunk kódot végrehajtani. Nem tesz mást, csak lehetővé teszi programunk szerkezetének fenntartását.
-
-Példa a jelszavas használatára egy függvényben:
+Példa:
 
 A kulcsszó átadása egy függvényben akkor használatos, ha definiálunk egy függvényt, de nem akarjuk azonnal megvalósítani a logikáját. Lehetővé teszi, hogy a függvény szintaktikailag érvényes legyen, még akkor is, ha még nem hajt végre műveleteket.
-
-
-
-
+```Python
 def fun():
     pass  # Placeholder, no functionality yet
 
 # Call the function
 fun()
-12. Mit jelent a szünet, folytatás és átadás Pythonban? 
-A break utasítás arra szolgál, hogy lezárja azt a ciklust vagy utasítást, amelyben jelen van. Ezt követően a vezérlés átmegy a break utasítás utáni utasításokra, ha elérhető.
-A Continue szintén egy ciklusvezérlő utasítás, csakúgy, mint a break utasítás. A turpināt utasítás ellentétes a break utasítással, a ciklus befejezése helyett a ciklus következő iterációjának végrehajtására kényszerít.
-A Pass azt jelenti, hogy nem hajtunk végre műveletet, vagyis egy helyőrző az összetett utasításban, ahol üresnek kell maradnia, és nem kell oda írni semmit.
-13. Hogyan kerülnek átadásra az argumentumok érték vagy hivatkozás alapján a Pythonban?
-A Python argumentumátadási modellje  sem nem „Érték szerinti átadás”, sem „Referencia átadása”, hanem „Objektumreferencia átadása”. 
+```
+## 12. Mit jelent a break, continue és pass Pythonban? 
+A break utasítás arra szolgál, hogy lezárja azt a loopot vagy statementet, amelyben jelen van. Ezt követően a kontrol átmegy a break utasítás utáni utasításokra, ha elérhető.
+A Continue szintén egy loop control statement, csakúgy, mint a break statement. A continue utasítás ellentétes a break utasítással, a loop befejezése helyett a loop következő iterációjának végrehajtására kényszeríti.
+A Pass azt jelenti, hogy nem hajtunk végre műveletet, vagyis egy placeholder az összetett utasításban, ahol üresnek kell maradnia, és nem kell oda írni semmit.
 
-A függvényben átadott objektum típusától függően a függvény eltérően viselkedik. A megváltoztathatatlan objektumok „érték szerinti áthaladást” mutatnak, míg a változtatható objektumok „referencia szerint áthaladnak”.
+## 13. Hogyan kerülnek átadásra az argumentumok value vagy reference alapján a Pythonban?
+A Python argumentumátadási modellje sem nem „Pass by value”, sem „Pass by reference”, hanem „Pass by object reference”.
 
-Az alábbi példában ellenőrizheti az áthaladási érték és az áthaladási referencia közötti különbséget:
+A függvényben átadott objektum típusától függően a függvény eltérően viselkedik. Az immutable objektumok „Pass by value” mutatnak, míg a mutable objektumok „Pass by reference”.
 
-
-
-
+Az alábbi példában a pass by value és a pass by reference közötti különbség:
+```Python
 def call_by_value(x):
     x = x * 2
     print("in function value updated to", x)
@@ -121,67 +116,61 @@ print("list before",my_list)
 call_by_reference(my_list)
 print("after function list is ",my_list)
 
-Kimenet
-előtti szám = 6
-a függvényértékben 12-re frissítve
-függvény után num value= 6
-lista az ['E'] előtt
-a függvénylistában frissítve ['E', 'D']
-a függvénylista után ['E', 'D']
-1 4. Mi a lambda függvény?
+Output
+number before = 6
+in function value updated to 12
+after function num value= 6
+list before ['E']
+in function list updated to ['E', 'D']
+after function list is  ['E', 'D']
+```
+
+## 14. Mi a lambda függvény?
 A lambda függvény egy névtelen függvény. Ennek a függvénynek tetszőleges számú paramétere lehet, de csak egy utasítása lehet.
 
-A példában definiáltunk egy lambda függvényt ( felső ), hogy egy karakterláncot nagybetűvé alakítsunk a felső( ) segítségével.
-
-
-
-
+A példában definiáltunk egy lambda függvényt (upper), hogy egy stringet nagybetűvé alakítsunk az upper() segítségével.
+```Python
 s1 = 'GeeksforGeeks'
 
 s2 = lambda func: func.upper()
 print(s2(s1))
 
-Kimenet
+Output
 GEEKSFORGEEKS
-15. Miben különbözik a szótár a listától?
-A lista az indexük által elért elemek rendezett gyűjteménye, míg a szótár kulcs-érték párok rendezetlen gyűjteménye, amelyekhez egyedi kulcsokkal lehet hozzáférni. A listák ideálisak a szekvenciális adatokhoz, míg a szótárak jobbak az asszociatív adatokhoz. Például egy lista tárolhatja a [10, 20, 30] értéket, míg a szótárban az {"a": 10, "b": 20, "c": 30}.
+```
+## 15. Miben különbözik a dictionary a listtol?
+A list az indexük által elért elemek rendezett gyűjteménye, míg a dictionary kulcs-érték párok rendezetlen gyűjteménye, amelyekhez egyedi kulcsokkal lehet hozzáférni. A listák ideálisak a szekvenciális adatokhoz, míg a szótárak jobbak az asszociatív adatokhoz. Például egy list tárolhatja a [10, 20, 30] értéket, míg a dictionaryben az {"a": 10, "b": 20, "c": 30}.
 
-16. Mi az a listaértés? Adj egy példát.
-A listaértelmezés  egy módja annak, hogy tömör szintaxist használva listákat hozzunk létre. Lehetővé teszi, hogy új listát állítsunk elő úgy, hogy egy  kifejezést  alkalmazunk egy létező  iterálható  elem (például  lista  vagy  tartomány ) minden elemére. Ez segít nekünk tisztább, olvashatóbb kódot írni a hagyományos hurkolási technikákhoz képest.
+## 16. Mi az a list Comprehension? Adj egy példát.
+A list Comprehension egy módja annak, hogy tömör szintaxist használva listákat hozzunk létre. Lehetővé teszi, hogy új listát állítsunk elő úgy, hogy egy expressiont alkalmazunk egy létező iterálható elem (például list vagy range) minden elemére. Ez segít nekünk tisztább, olvashatóbb kódot írni a hagyományos looping technikákhoz képest.
 
-Például , ha van egy listánk egész számokból, és szeretnénk létrehozni egy új listát, amely tartalmazza az egyes elemek négyzetét, akkor ezt könnyen elérhetjük a lista megértésével.
-
-
-
-
+Például, ha van egy listánk egész számokból, és szeretnénk létrehozni egy új listát, amely tartalmazza az egyes elemek négyzetét, akkor ezt könnyen elérhetjük a list comprehensionnel.
+```Python
 a = [2,3,4,5]
 res = [val ** 2 for val in a]
 print(res)
 
-Kimenet
+Output
 [4, 9, 16, 25]
-17. Mik azok az *argok és **kwargok?
-*args: A  függvénydefiníciók speciális  *args szintaxisa változó számú argumentum átadására szolgál egy függvénynek. Python program változó számú argumentum *args illusztrálására: 
+```
 
-
-
-
+## 17. Mik azok az *args és **kwargs?
+*args: A függvénydefiníciók speciális *args szintaxisa változó számú argumentum átadására szolgál egy függvénynek. Python program változó számú argumentum *args illusztrálására: 
+```Python
 def myFun(*argv):
     for arg in argv:
         print(arg)
 
 myFun('Hello', 'Welcome', 'to', 'GeeksforGeeks')
 
-Kimenet
-Helló
-Üdvözöljük
-hogy
+Output
+Hell
+Welcome
+to
 GeeksforGeeks
+```
 **kwargs: A **kwargs speciális szintaxis a függvénydefiníciókban változó hosszúságú argumentumlista átadására szolgál. A kwargs nevet a kettős csillaggal ** használjuk.
-
-
-
-
+```Python
 def fun(**kwargs):
     for k, val in kwargs.items():
         print("%s == %s" % (k, val))
@@ -190,71 +179,66 @@ def fun(**kwargs):
 # Driver code
 fun(s1='Geeks', s2='for', s3='Geeks')
 
-Kimenet
+Output
 s1 == Geeks
 s2 == for
 s3 == Geeks
-18. Mi a különbség a halmaz és a szótár között?
-A  Python Set  egy rendezetlen adatgyűjtési adattípus, amely iterálható, változtatható, és nem tartalmaz ismétlődő elemeket. A Python halmazosztálya a halmaz matematikai fogalmát reprezentálja.
+```
+## 18. Mi a különbség a Set es a Dictionary között?
+A Python Set egy rendezetlen adatgyűjtési adattípus, amely iterálható, változtatható, és nem tartalmaz ismétlődő elemeket. A Python set osztalya a set matematikai fogalmát reprezentálja.
 
-Szintaxis : Kapcsos zárójelekkel {} vagy a set() függvénnyel határozható meg.
+Szintaxis: Kapcsos zárójelekkel {} vagy a set() függvénnyel határozható meg.
+```Python
+my_set = {1, 2, 3}
+```
 
-saját_készlet = {1, 2, 3}
+A Python dictionary az adatértékek rendezett gyűjteménye, amely adatértékek, például map tárolására szolgál, amely más adattípusokkal ellentétben csak egyetlen értéket tartalmaznak elemként, a dictionary kulcs:érték párost tartalmaz. A kulcsértékek szerepelnek a dictionaryben az optimalizáltabbá tétel érdekében.
 
-
-A Python szótár  az adatértékek rendezett (Py 3.7 óta) [rendezetlen (Py 3.6 és korábbi)] gyűjteménye, amely adatértékek, például térkép tárolására szolgál, amely más adattípusokkal ellentétben, amelyek csak egyetlen értéket tartalmaznak elemként, a szótár  kulcs:érték  párost tartalmaz. A kulcsértékek szerepelnek a szótárban az optimalizáltabbá tétel érdekében.
-
-Szintaxis : Határozva: kapcsos zárójelek {} kulcs-érték párokkal.
-
+Szintaxis: kapcsos zárójelekkel hatarozhato meg, bennuk {} kulcs-érték párokkal.
+```Python
 my_dict = {"a": 1, "b": 2, "c": 3}
+```
 
-
-19. Hogyan lehet két listát összefűzni Pythonban?
+## 19. Hogyan lehet két listát összefűzni Pythonban?
 Két listát összefűzhetünk a Pythonban az +operátor vagy az extend() metódus használatával.
 
 1. A + operátor használatával:
 
 Ez új listát hoz létre két lista összekapcsolásával.
-
-
-
-
+```Python
 list1 = [1, 2, 3]
 list2 = [4, 5, 6]
 result = list1 + list2
 print(result) 
 
-Kimenet
+output
 [1, 2, 3, 4, 5, 6]
+```
 2. Az extend() metódus használatával:
 
-Ezzel a helyben hozzáadja a második lista összes elemét az első listához.
-
-
-
-
+Ezzel helyben hozzáadja a második lista összes elemét az első listához.
+```Python
 list1 = [1, 2, 3]
 list2 = [4, 5, 6]
 list1.extend(list2)
 print(list1) 
 
-Kimenet
+Output
 [1, 2, 3, 4, 5, 6]
-20. Mi a docstring a Pythonban?
-A Python dokumentációs karakterláncai (vagy docstringek ) kényelmes módot kínálnak a dokumentáció Python modulokhoz, függvényekhez, osztályokhoz és metódusokhoz való társítására.
+```
+## 20. Mi a docstring a Pythonban?
+A Python dokumentációs karakterláncai (vagy docstringek) kényelmes módot kínálnak a dokumentáció Python modulokhoz, függvényekhez, osztályokhoz és metódusokhoz való társítására.
 
-Dokumentumkarakterláncok deklarálása: A docstringek deklarálása „háromszoros idézőjelek” vagy „””háromszoros idézőjelek”” használatával történik, közvetlenül az osztály-, metódus- vagy függvénydeklaráció alatt. Minden függvénynek rendelkeznie kell egy docstringgel.
+Dokumentumkarakterláncok deklarálása: A docstringek deklarálása ””háromszoros idézőjelek”” használatával történik, közvetlenül az osztály-, metódus- vagy függvénydeklaráció alatt. Minden függvénynek rendelkeznie kell egy docstringgel.
 Docsstringek elérése: A docstringek az objektum __doc__ metódusával vagy a súgó funkcióval érhetők el.
-21. Hogyan történik a kivételes kezelés Pythonban?
-Három fő kulcsszó van, azaz try, kivéve és végül, amelyek a kivételek elkapására és a helyreállítási mechanizmus megfelelő kezelésére szolgálnak. A Try egy kód blokkja, amely hibákat figyel. Kivéve, hogy hiba esetén a blokk végrehajtásra kerül.
 
-Az utolsó blokk szépsége abban rejlik, hogy hibapróbálkozás után végrehajtja a kódot. Ez a blokk végrehajtásra kerül, függetlenül attól, hogy hiba történt-e vagy sem. Végül a blokk az objektumok/változók szükséges tisztítási tevékenységeinek elvégzésére szolgál.
+## 21. Hogyan történik az exceptional handling Pythonban?
+Három fő kulcsszó van, azaz try, except és finally, amelyek az exceptionok elkapására és a helyreállítási mechanizmus megfelelő kezelésére szolgálnak. A Try egy kód blokkja, amely hibákat figyel. except blokk hiba esetén végrehajtásra kerül.
+
+A finally blokk szépsége abban rejlik, hogy hibapróbálkozás után végrehajtja a kódot. Ez a blokk végrehajtásra kerül, függetlenül attól, hogy hiba történt-e vagy sem. Végül a blokk az objektumok/változók szükséges tisztítási tevékenységeinek elvégzésére szolgál.
 
 Példa: Ha megpróbál egy számot nullával osztani, az kivételt okoz.
-
-
-
-
+```Python
 n = 10
 try:
     res = n / 0  # This will raise a ZeroDivisionError
@@ -262,62 +246,43 @@ try:
 except ZeroDivisionError:
     print("Can't be divided by zero!")
 
-Kimenet
-Nem osztható nullával!
-Magyarázat:  Ebben a példában a szám 0-val való elosztása  ZeroDivisionError- t eredményez . A try blokk tartalmazza azt a kódot, amely kivételt okozhat, és a kivétel blokk kezeli a kivételt, és hibaüzenetet nyomtat a program leállítása helyett.
+Output
+Can't be divided by zero!
+```
+Magyarázat:  Ebben a példában a szám 0-val való elosztása  ZeroDivisionError-t eredményez. A try blokk tartalmazza azt a kódot, amely exceptiont okozhat, és az except blokk kezeli az exceptiont, és hibaüzenetet nyomtat a program leállítása helyett.
 
-Python-Exception-Handling-1.webpPython-Exception-Handling-1.webp
-22. Mi a különbség a Python tömbök és a listák között?
-A tömbök (ha a Python moduljáról beszélünk array) kifejezetten olyan numerikus elemek gyűjteményének tárolására szolgálnak, amelyek mindegyike azonos típusú. Ez hatékonyabbá teszi nagy mennyiségű adat tárolását és numerikus számítások végrehajtását, ahol a típuskonzisztencia megmarad.
+## 22. Mi a különbség a Python arrayek és a listek között?
+Az arrayek kifejezetten olyan numerikus elemek gyűjteményének tárolására szolgálnak, amelyek mindegyike azonos típusú. Ez hatékonyabbá teszi nagy mennyiségű adat tárolását és numerikus számítások végrehajtását, ahol a típuskonzisztencia megmarad.
 
 Szintaxis: A tömbök használatához importálni kell a modult.array
 
 Példa:
-
-
-
-
+```Python
 from array import array
 arr = array('i', [1, 2, 3, 4])  # Array of integers
-A listák  rugalmasabbak, mint a tömbök, mivel különböző típusú elemeket (egész számokat, karakterláncokat, objektumokat stb.) tartalmazhatnak. Beépítettek a Pythonba, és nem igényelnek további modulok importálását.
+```
+A listek rugalmasabbak, mint az arrayek, mivel különböző típusú elemeket (egész számokat, karakterláncokat, objektumokat stb.) tartalmazhatnak. Beépítettek a Pythonba, és nem igényelnek további modulok importálását.
 
 A listák számos műveletet támogatnak, amelyek módosíthatják a listát.
 
 Példa:
-
-
-
-
+```Python
 lst = [1, 'hello', 3.14, [1, 2, 3]]
-További információ a Lista és a tömb közötti különbségekről a Pythonban
+```
 
-
-23. Mik azok a modulok és csomagok a Pythonban?
+## 23. Mik azok a modulok és packagek a Pythonban?
 A modul egy olyan fájl, amely Python kódot (függvényeket, változókat, osztályokat) tartalmaz, amely más programokban újra felhasználható. Felfoghatja úgy, mint egy kódkönyvtárat. Például: a math egy beépített modul, amely olyan matematikai függvényeket biztosít, mint az sqrt(), a pi stb.
-
-
-
-
+```
 import math
-print(math.sqrt(16))  
-A csomag egy könyvtárban tárolt kapcsolódó modulok gyűjteménye. Segít a modulok rendszerezésében és csoportosításában a könnyebb kezelés érdekében. Például: A numpy csomag több modult tartalmaz numerikus műveletekhez.
+print(math.sqrt(16))
+```
+A package egy könyvtárban tárolt kapcsolódó modulok gyűjteménye. Segít a modulok rendszerezésében és csoportosításában a könnyebb kezelés érdekében. Például: A numpy csomag több modult tartalmaz numerikus műveletekhez.
 
-Csomag létrehozásához a könyvtárnak tartalmaznia kell egy speciális __init__.py nevű fájlt .
+Package létrehozásához a könyvtárnak tartalmaznia kell egy speciális __init__.py nevű fájlt.
 
-Középhaladó Python interjúkérdések
-24. Mi a különbség az xrange és a range függvények között?
-A range() és az xrange() két függvény, amely felhasználható bizonyos számú ismétlésre a for ciklusokban a Pythonban. 
-
-A Python 3-ban nincs xrange, de a range függvény úgy viselkedik, mint az xrange.
-Python 2-ben
-range() – Ez egy tartományobjektumot ad vissza, amely egy megváltoztathatatlan sorozattípus, amely igény szerint generálja a számokat. 
-xrange() – Ez a függvény azt a generátor objektumot adja vissza, amely csak hurkolással használható számok megjelenítésére. Az egyetlen konkrét tartomány igény szerint jelenik meg, ezért lusta értékelésnek nevezik.
-25. Mi az a szótári megértés? Adj egy példát
+## 25. Mi az a Dictionary Comprehension? Adj egy példát
 A Dictionary Comprehension egy szintaktikai konstrukció, amely megkönnyíti a szótár létrehozását a meglévő iterálhatóság alapján.
-
-
-
-
+```Python
 # Python code to demonstrate dictionary 
 # comprehension
 
@@ -333,8 +298,10 @@ myDict = { k:v for (k,v) in zip(keys, values)}
 
 print (myDict)
 
-Kimenet
+Output
 {'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5}
+```
+
 26. Lehetséges a Tuple Comprehension Pythonban? Ha igen, hogyan és ha nem, miért?
 A sorok értelmezése közvetlenül nem támogatott, a Python meglévő szolgáltatásai, például a generátor kifejezések és a tuple() függvény rugalmas alternatívákat kínálnak az iterálható adatokból sorok létrehozására.
 
